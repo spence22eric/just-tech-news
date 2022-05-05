@@ -13,7 +13,10 @@ Comment.init(
         },
         comment_text: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            validate: {
+                len: 160
+            }
         },
         user_id: {
             type: DataTypes.INTEGER,
